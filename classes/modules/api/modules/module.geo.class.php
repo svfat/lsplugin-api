@@ -21,8 +21,10 @@ class PluginApi_ModuleApi_Geo extends PluginApi_ModuleApi_Module {
 		if (!($oCountry=$this->Geo_GetCountryById($this->getParam('id')))) {
 			return 'Country not found';
 		}
-		//$aResult=$this->Geo_GetTargets(array('id'=>$oCountry->getId(),'target_type'=>'user'),$iPage,Config::Get('module.user.per_page'));
-	
+		/*$aResult=$this->Geo_GetTargets(array('id'=>$oCountry->getId(),'target_type'=>'user'),$iPage,Config::Get('module.user.per_page'));
+		*/
+		$aResult=$this->Geo_GetTargets(array('id'=>$oCountry->getId(),'target_type'=>'user'));
+
 		return $this->getParam('id');
 	}
 
