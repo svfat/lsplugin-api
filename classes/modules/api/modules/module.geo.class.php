@@ -83,7 +83,7 @@ class PluginApi_ModuleApi_Geo extends PluginApi_ModuleApi_Module {
 		if (!($iParamId=$this->getParam('id'))) {
 			throw new ExceptionApiRequestError($this->Lang_Get('system_error'));
 		}
-		if (!($oCity=$this->Geo_GetCityById($iParamId)) {
+		if (!($oCity=$this->Geo_GetCityById($iParamId))) {
 			throw new ExceptionApiRequestError($this->Lang_Get('system_error'));
 		}
 
