@@ -30,6 +30,7 @@ class PluginApi_ModuleApi_Geo extends PluginApi_ModuleApi_Module {
 		foreach($aResult['collection'] as $oTarget) {
 			$aUsersId[]=$oTarget->getTargetId();
 		}
+		
 		$aUsersCountry=$this->User_GetUsersAdditionalData($aUsersId);
 		echo $iCount;
 		return $aUsersCountry;
