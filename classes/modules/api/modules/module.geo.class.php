@@ -23,13 +23,15 @@ class PluginApi_ModuleApi_Geo extends PluginApi_ModuleApi_Module {
 		}
 		/*$aResult=$this->Geo_GetTargets(array('id'=>$oCountry->getId(),'target_type'=>'user'),$iPage,Config::Get('module.user.per_page'));
 		*/
-		$aResult=$this->Geo_GetTargets(array('id'=>$oCountry->getId(),'target_type'=>'user'),1,9999);
+		$iCount=0;
+		$aResult=$this->Geo_GetTargets(array('id'=>$oCountry->getId(),'target_type'=>'user'),$iCount,1,9999);
 
 		$aUsersId=array();
 		foreach($aResult['collection'] as $oTarget) {
 			$aUsersId[]=$oTarget->getTargetId();
 		}
 		$aUsersCountry=$this->User_GetUsersAdditionalData($aUsersId);
+		echo $iCount;
 		return $aUsersCountry;
 	}
 
