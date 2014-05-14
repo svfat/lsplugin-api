@@ -29,7 +29,7 @@ class PluginApi_ModuleApi_Geo extends PluginApi_ModuleApi_Module {
 			$aUsersId[]=$oTarget->getTargetId();
 		}
 
-		$aUsersCountry=$this->User_GetUsersAdditionalData($aUsersId);
+		$aUsersCountry=unserialize($this->User_GetUsersAdditionalData($aUsersId));
 		foreach($aUsersCountry as $oUser) {
 		}
 		return array('collection'=>$aUsersCountry,'count'=>count($aUsersCountry));
