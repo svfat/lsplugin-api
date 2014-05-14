@@ -23,7 +23,7 @@ class PluginApi_ModuleApi_Geo extends PluginApi_ModuleApi_Module {
 		}
 		/*$aResult=$this->Geo_GetTargets(array('id'=>$oCountry->getId(),'target_type'=>'user'),$iPage,Config::Get('module.user.per_page'));
 		*/
-		echo($oCountry);
+		echo($oCountry->getId());
 		$aResult=$this->Geo_GetTargets(array($oCountry->getId(),'target_type'=>'user'),1,30);
 		$aUsersId=array();
 		foreach($aResult['collection'] as $oTarget) {
