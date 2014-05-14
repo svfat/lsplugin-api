@@ -34,7 +34,7 @@ class PluginApi_ModuleApi_Geo extends PluginApi_ModuleApi_Module {
 			echo $oUser->getProfileName();
 			echo "<br />";
 		}
-		return $aUsersCountry;
+		return array('collection'=>$aUsersCountry,'count'=>count($aUsersCountry));
 	}
 
 
