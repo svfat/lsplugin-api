@@ -32,8 +32,8 @@ class PluginApi_ModuleApi_Geo extends PluginApi_ModuleApi_Module {
 		
 		$aResult = array();
 		$aUsers=$this->User_GetUsersByArrayId($aUsersId);
-		foreach($aUsers as $oUser) {
-			$aResult=0;
+		foreach($aUsers as $k => $oUser) {
+			$aResult['user_id']=$k;
 		}
 
 
