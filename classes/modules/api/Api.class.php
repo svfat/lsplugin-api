@@ -25,6 +25,7 @@ class PluginApi_ModuleApi extends Module
 		'comment' => 'PluginApi_ModuleApi_Comment',
 		'stream' => 'PluginApi_ModuleApi_Stream',
 		'feed' => 'PluginApi_ModuleApi_Feed',
+		'geo' => 'PluginApi_ModuleApi_Geo'
 	);
 
     protected $_aIncludePath = array();
