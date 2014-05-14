@@ -1,14 +1,10 @@
 <?php
 class PluginApi_ModuleApi_Geo extends PluginApi_ModuleApi_Module {
 	protected $_aActions = array(
-		'hello' => 'ActionHello',
 		'country' => 'ActionCountry',
+		'region' => 'ActionRegion',
+		'city' => 'ActionCity',
 	);
-
-	protected function ActionHello()	{
-		echo 'Hello';
-     
-	}
 
 	protected function ActionCountry() {
 		if (!($iParamId=$this->getParam('id'))) {
