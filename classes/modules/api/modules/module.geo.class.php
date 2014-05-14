@@ -27,7 +27,7 @@ class PluginApi_ModuleApi_Geo extends PluginApi_ModuleApi_Module {
 		$aResult=$this->Geo_GetTargets(array($oCountry->getId(),'target_type'=>'user'),1,30);
 		$aUsersId=array();
 		foreach($aResult['collection'] as $oTarget) {
-			echo array_keys(array_keys($aResult));	
+			echo json_encode($aResult);	
 			$aUsersId[]=$oTarget->getTargetId();
 		}
 
