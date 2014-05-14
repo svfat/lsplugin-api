@@ -30,12 +30,14 @@ class PluginApi_ModuleApi_Geo extends PluginApi_ModuleApi_Module {
 		}
 
 		
-		/*$aUsersCountry=$this->User_GetUsersAdditionalData($aUsersId);*/
-		$aUsersCountry=$this->User_GetUsersByArrayId($aUsersId);
-		foreach($aUsersCountry as $oUser) {
+		$aResult = array();
+		$aUsers=$this->User_GetUsersByArrayId($aUsersId);
+		foreach($aUsers as $oUser) {
 			echo $oUser->getPassword();
 		}
-		return array('collection'=>$aUsersCountry,'count'=>count($aUsersCountry));
+
+
+		return array('collection'=>$aResult,'count'=>count($aResult));
 	}
 
 
