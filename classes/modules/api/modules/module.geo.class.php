@@ -25,7 +25,7 @@ class PluginApi_ModuleApi_Geo extends PluginApi_ModuleApi_Module {
 		*/
 		$aResult=$this->Geo_GetTargets(array('id'=>$oCountry->getId(),'target_type'=>'user'),1,0);
 
-		return $this->getParam('id');
+		return $aResult;
 	}
 
 
