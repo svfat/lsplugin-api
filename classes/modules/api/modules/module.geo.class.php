@@ -11,7 +11,8 @@ class PluginApi_ModuleApi_Geo extends PluginApi_ModuleApi_Module {
 	}
 
 	protected function ActionCountry() {
-		if (!$this->getParam('id')) {
+		echo $this->getParam('id');
+	/*	if (!$this->getParam('id')) {
 			throw new ExceptionApiRequestError($this->Lang_Get('system_error'));
 		}
 		$oTopic = $this->Topic_GetTopicById($this->getParam('id'));
@@ -21,7 +22,7 @@ class PluginApi_ModuleApi_Geo extends PluginApi_ModuleApi_Module {
 
 		$aResult=$this->Geo_GetTargets(array('id'=>$oCountry->getId(),'target_type'=>'user'),$iPage,Config::Get('module.user.per_page'));
 		
-		return $aResult;
+		return $aResult;*/
 	}
 
 
