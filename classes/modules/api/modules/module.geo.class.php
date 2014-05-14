@@ -23,7 +23,7 @@ class PluginApi_ModuleApi_Geo extends PluginApi_ModuleApi_Module {
 		}
 		/*$aResult=$this->Geo_GetTargets(array('id'=>$oCountry->getId(),'target_type'=>'user'),$iPage,Config::Get('module.user.per_page'));
 		*/
-		$aResult=$this->Geo_GetTargets(array($iParamID,'target_type'=>'user'),1,30);
+		$aResult=$this->Geo_GetTargets(array($oCountry->getId(),'target_type'=>'user'),1,30);
 		$aUsersId=array();
 		foreach($aResult['collection'] as $oTarget) {
 			$aUsersId[]=$oTarget->getTargetId();
@@ -33,7 +33,15 @@ class PluginApi_ModuleApi_Geo extends PluginApi_ModuleApi_Module {
 		$aResult = array();
 		$aUsers=$this->User_GetUsersByArrayId($aUsersId);
 		foreach($aUsers as $k => $oUser) {
-			$aResult[$k]=array('login' => $oUser->getLogin(), 'mail' => $oUser->getMail());
+			$aResult[$k]=array('login' => $oUser->getLogin(),
+							   'skill' => $oUser->getSkill(),
+							   'rating' => $oUser->getRating(),
+							   'name' => $oUser->getProfileName(),
+							   'country' => $oUser->getProfileCountry(),
+							   'region' => $oUser->getProfileRegion(),
+							   'city' => $oUser->getProfileCity(),
+							   'webpath' => $oUser->getUserWebPath()
+							   );
 		}
 
 
