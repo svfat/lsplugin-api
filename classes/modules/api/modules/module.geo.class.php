@@ -32,6 +32,7 @@ class PluginApi_ModuleApi_Geo extends PluginApi_ModuleApi_Module {
 		$aUsersCountry=$this->User_GetUsersAdditionalData($aUsersId);
 		foreach($aUsersCountry as $oUser) {
 			echo $oUser->getProfileName();
+			echo ;
 		}
 		return $aUsersCountry;
 	}
