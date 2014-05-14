@@ -5,7 +5,7 @@ class PluginApi_ModuleApi_Geo extends PluginApi_ModuleApi_Module {
 	);
 
 	protected function ActionShow()	{
-		echo 'Hello'; 
+		echo 'Hello';  
 
 	}
 }
