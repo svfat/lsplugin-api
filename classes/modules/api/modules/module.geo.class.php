@@ -17,10 +17,10 @@ class PluginApi_ModuleApi_Geo extends PluginApi_ModuleApi_Module {
 	/*	$oTopic = $this->Topic_GetTopicById($this->getParam('id'));
 		if (!$oTopic) {
 			throw new ExceptionApiRequestError($this->Lang_Get('system_error'));
-		}
+		}*/
 
 		$aResult=$this->Geo_GetTargets(array('id'=>$oCountry->getId(),'target_type'=>'user'),$iPage,Config::Get('module.user.per_page'));
-		*/
+	
 		return $this->getParam('id');
 	}
 
