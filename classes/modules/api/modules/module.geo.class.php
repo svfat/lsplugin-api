@@ -14,12 +14,11 @@ class PluginApi_ModuleApi_Geo extends PluginApi_ModuleApi_Module {
 		if (!($iParamID=$this->getParam('id'))) {
 			throw new ExceptionApiRequestError($this->Lang_Get('system_error'));
 		}
-		echo $iParamID;
 	/*	$oTopic = $this->Topic_GetTopicById($this->getParam('id'));
 		if (!$oTopic) {
 			throw new ExceptionApiRequestError($this->Lang_Get('system_error'));
 		}*/
-		if (!($oCountry=$this->Geo_GetCountryById($this->$iParamID))) {
+		if (!($oCountry=$this->Geo_GetCountryById($iParamID))) {
 			return 'Country not found';
 		}
 		/*$aResult=$this->Geo_GetTargets(array('id'=>$oCountry->getId(),'target_type'=>'user'),$iPage,Config::Get('module.user.per_page'));
