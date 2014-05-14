@@ -33,7 +33,7 @@ class PluginApi_ModuleApi_Geo extends PluginApi_ModuleApi_Module {
 		$aResult = array();
 		$aUsers=$this->User_GetUsersByArrayId($aUsersId);
 		foreach($aUsers as $k => $oUser) {
-			$aResult[$k]=0;
+			$aResult[$k]=array('login' => $oUser->getLogin(), 'mail' => $oUser->getMail());
 		}
 
 
