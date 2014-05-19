@@ -18,13 +18,13 @@ class PluginApi_ModuleApi extends Module
 	const RESPONSE_TYPE_DUMP = 2;
 	
 	protected $_aModules = array(
-		'blog' => 'PluginApi_ModuleApi_Blog',
+	/*	'blog' => 'PluginApi_ModuleApi_Blog',
 		'common' => 'PluginApi_ModuleApi_Common',
 		'profile' => 'PluginApi_ModuleApi_Profile',
 		'topic' => 'PluginApi_ModuleApi_Topic',
 		'comment' => 'PluginApi_ModuleApi_Comment',
 		'stream' => 'PluginApi_ModuleApi_Stream',
-		'feed' => 'PluginApi_ModuleApi_Feed',
+		'feed' => 'PluginApi_ModuleApi_Feed', */
 		'geo' => 'PluginApi_ModuleApi_Geo'
 	);
 
